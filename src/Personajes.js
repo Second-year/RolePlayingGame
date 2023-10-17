@@ -20,3 +20,4 @@ class Personaje {
         }
     }
 }
+<script src="js/main.js"></script>
