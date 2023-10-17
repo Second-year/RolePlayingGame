@@ -1,3 +1,6 @@
+//Stephanie Orantes
+// Lo hare de manera separada para tener un mayor orden, cuando tenga todo el juego lo pasare a una a la menor
+// cantidad de archivos posible, pero mantendre este pagina para irme guiando. 
 // Clase Personaje
 class Personaje {
     constructor(nombre, clase, nivel, experiencia) {

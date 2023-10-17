@@ -1,3 +1,4 @@
+//Stephanie Orantes
 class Jugador extends Personaje {
     constructor(nombre, clase) {
         super(nombre, clase, 1, 0);
@@ -10,7 +11,7 @@ class Guerrero extends Jugador {
         super(nombre, "Guerrero");
     }
 
-    // Puedes añadir habilidades específicas del Guerrero aquí
+    //Habilidades específicas del Guerrero
     usarHabilidadEspecial(enemigo) {
         console.log(`${this.nombre} usa una habilidad especial contra ${enemigo.nombre}`);
         // Lógica de la habilidad especial
@@ -19,7 +20,7 @@ class Guerrero extends Jugador {
 
 // Evento de carga de página
 document.addEventListener("DOMContentLoaded", () => {
-    // Ejemplo de creación y gestión de personajes
+    // Creación y gestión de personajes
     const jugador1 = new Guerrero("Aragorn");
     const enemigo1 = new Enemigo("Orco", 1);
 

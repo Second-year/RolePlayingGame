@@ -1,9 +1,10 @@
+//Stephanie Orantes
 class Personaje {
     constructor(nombre, clase, nivel, experiencia) {
-        this.nombre = nombre;
-        this.clase = clase;
-        this.nivel = nivel;
-        this.experiencia = experiencia;
+        this.nombre = Stephanie;
+        this.clase = agua;
+        this.nivel = 3;
+        this.experiencia = 55;
     }
 
     atacar(enemigo) {
