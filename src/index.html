@@ -1,18 +1,37 @@
-<!--Stephanie Oraantes -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Agrega enlaces a las bibliotecas de Tailwind CSS aquí -->
-    <title>Juego de Rol RPG. Batalla del siglo</title>
+<style>
+html, body, canvas{
+	margin: 0;
+	padding: 0;
+	background: black;
+	display:block;
+	color:rgb(169, 152, 119);
+	font-family: Verdana, sans-serif;
+	font-size: 13px;
+}
+canvas{
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none
+}
+a{
+	color: #d96500;
+}
+.page{
+	margin: 0 auto;
+	width: 980px;
+}
+</style>
 </head>
 <body>
-    <div class="container mx-auto p-4">
-        <h1 class="text-2xl font-bold mb-4">Crea tu personaje</h1>
-        <!-- Aquí agregarás los campos para crear personajes -->
-    </div>
-    <script src="js/main.js"></script>
+	<div class="page">
+		<canvas id="floor" width="980" height="661"></canvas>
+		<p>Isometric minimal-code style game at html5 canvas and javascript.</p>
+		<p>See more at <a href="https://github.com/mitallast/diablo-js">github</a></p>
+	</div>
+<script>/*window.onerror=alert*/</script>
+<script src="diablo.js"></script>
 </body>
 </html>
