@@ -2,35 +2,56 @@
 <html>
 <head>
 <style>
-html, body, canvas{
-	margin: 0;
-	padding: 0;
-	background: rgb(211, 83, 83);
-	display:block;
-	color:rgb(169, 152, 119);
-	font-family: Verdana, sans-serif;
-	font-size: 13px;
+html, body, canvas {
+    margin: 0;
+    padding: 0;
+    background: rgb(211, 83, 83);
+    display: block;
+    color: rgb(169, 152, 119);
+    font-family: Verdana, sans-serif;
+    font-size: 13px;
 }
-canvas{
-	-webkit-user-select: none;
+
+canvas {
+    -webkit-user-select: none;
     -moz-user-select: none;
     -khtml-user-select: none;
-    background: red; 
+    background: red;
 }
-a{
-	color: #d96500;
+
+a {
+    color: #d96500;
 }
-.page{
-	margin: 0 auto;
-	width: 980px;
+
+.page {
+    margin: 0 auto;
+    width: 980px;
+}
+
+/* Estilo para las imágenes en las esquinas */
+.top-corner {
+    position: absolute;
+    width: 200px; /* Ancho de la imagen */
+    top: 0; 
+}
+
+.top-left {
+    left: 0; 
+}
+
+.top-right {
+    right: 0;
 }
 </style>
 </head>
 <body>
-	<div class="page">
-		<canvas id="floor" width="980" height="661"></canvas>
-	</div>
-<script>/*window.onerror=alert*/</script>
-<script src="INU.js"></script>
+    <div class="page">
+        <img src="cereso.png" alt="Cereso" class="top-corner top-left">
+        <img src="ceresoderecha.png" alt="Cereso" class="top-corner top-right">
+        <canvas id="floor" width="980" height="661"></canvas>
+    </div>
+    <script>/*window.onerror=alert*/</script>
+    <script src="INU.js"></script>
 </body>
 </html>
+
