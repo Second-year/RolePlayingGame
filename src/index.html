@@ -42,16 +42,23 @@ a {
 .top-right {
     right: 0;
 }
+
+.bottom-right {
+    position: absolute;
+    width: 50px; /* Ancho de la imagen */
+    bottom: 0;
+    right: 0;
+}
 </style>
 </head>
 <body>
     <div class="page">
         <img src="cereso.png" alt="Cereso" class="top-corner top-left">
         <img src="ceresoderecha.png" alt="Cereso" class="top-corner top-right">
+        <img src="corona.png" alt="Corona" class="bottom-right">
         <canvas id="floor" width="980" height="661"></canvas>
     </div>
     <script>/*window.onerror=alert*/</script>
     <script src="INU.js"></script>
 </body>
 </html>
-
