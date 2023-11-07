@@ -1,3 +1,4 @@
+// STEPHANIE ORANTES
 (function(undefined) {
 
 var imageCount=0;

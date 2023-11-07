@@ -1,52 +1,42 @@
-// Clase base para elementos interactivos
-class InteractiveElement {
-    constructor(imageUrl) {
-      this.imageUrl = imageUrl;
+// STEPHANIE ORANTES
+// Clase base para pantallas de bienvenida
+class WelcomeScreen {
+    constructor(title, backgroundClass) {
+        this.title = title;
+        this.backgroundClass = backgroundClass;
     }
-  
-    render() {
-      const image = document.createElement('img');
-      image.src = this.imageUrl;
-      image.classList.add('cursor-pointer');
-      return image;
+
+    display() {
+        const container = document.body;
+        container.classList.add(this.backgroundClass);
+
+        const titleElement = document.createElement('h1');
+        titleElement.textContent = this.title;
+        titleElement.classList.add('text-4xl', 'font-bold', 'text-white', 'mb-6');
+        document.body.appendChild(titleElement);
     }
-  }
-  
-  // Clase para imágenes interactivas
-  class InteractiveImage extends InteractiveElement {
-    constructor(imageUrl, id) {
-      super(imageUrl);
-      this.id = id;
+}
+
+// Subclase para la pantalla de bienvenida de Orantes Castle
+class OrantesCastleWelcomeScreen extends WelcomeScreen {
+    constructor() {
+        super('------La mejor batalla', 'bg-castle');
     }
-  
-    render() {
-      const image = super.render();
-      image.addEventListener('click', () => onImageClick(this.id));
-      return image;
-    }
-  }
-  
-  // Función para manejar el clic en las imágenes
-  function onImageClick(imageId) {
-    console.log(`Has hecho clic en la imagen ${imageId}`);
-    // Acciones específicas según la imagen
-  }
-  
-  // Función para iniciar el juego
-  function startGame() {
-    // Redirige a la siguiente pantalla del juego o realiza otras acciones de inicio
-  }
-  
-  // Crear objetos de imágenes interactivas
-  const image1 = new InteractiveImage('imagen1.png', 1);
-  const image2 = new InteractiveImage('imagen2.png', 2);
-  
-  // Agregar las imágenes al DOM
-  const imageContainer = document.getElementById('image-container');
-  imageContainer.appendChild(image1.render());
-  imageContainer.appendChild(image2.render());
-  
-  // Agregar un controlador de clic al botón de inicio
-  const startButton = document.getElementById('start-button');
-  startButton.addEventListener('click', startGame);
-  
+}
+
+// Función para iniciar el juego
+function startGame() {
+    // Redirige al siguiente archivo HTML
+    window.location.href = 'index.html';
+
+    // Muestra un mensaje de buena suerte al usuario
+    alert('Para controlar el juego utiliza tu mouse. SUERTE');
+}
+
+// Agregar un controlador de clic al botón de inicio
+const startButton = document.getElementById('start-button');
+startButton.addEventListener('click', startGame);
+
+// Crear una instancia de la pantalla de bienvenida de Orantes Castle
+const welcomeScreen = new OrantesCastleWelcomeScreen();
+welcomeScreen.display();
